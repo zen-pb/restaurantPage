@@ -58,6 +58,7 @@ header button:hover {
     height: 70px;
     white-space: pre-line;
     line-height: 1.2;
+    align-self: center;
 }
 
 .hero button:hover {
