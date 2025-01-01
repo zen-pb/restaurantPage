@@ -46,10 +46,8 @@ header button:hover {
 
 .hero button {
     background-color: #D2DB89;
-    color: #333;
     padding: 12px 32px;
-    font-family: serif;
-    border: 2px solid #333;
+    border: 2px solid var(--text-color-black);
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 20px;
