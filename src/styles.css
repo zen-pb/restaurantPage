@@ -1,5 +1,5 @@
 :root {
-    --text-color-black: #231F20;
+    --color-black: #231F20;
 }
 
 header {
@@ -16,7 +16,7 @@ header button {
     letter-spacing: 0.5px;
     width: 110px;
     cursor: pointer;
-    color: var(--text-color-black);
+    color: var(--color-black);
 }
 
 header button:hover {
@@ -47,7 +47,7 @@ header button:hover {
 .hero button {
     background-color: #D2DB89;
     padding: 12px 32px;
-    border: 2px solid var(--text-color-black);
+    border: 2px solid var(--color-black);
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 20px;
@@ -66,7 +66,7 @@ header button:hover {
 
 .hero h1,
 .hero button {
-    color: var(--text-color-black);
+    color: var(--color-black);
     font-family: 'Modern Extended Book';
 }
 
