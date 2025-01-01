@@ -4,16 +4,21 @@ import loadHome from "./home";
 import loadMenu from "./menu";
 import loadAbout from "./about";
 
+const routes = {
+  home: loadHome,
+  menu: loadMenu,
+  about: loadAbout
+};
+
 const content = document.getElementById("content");
 
 document.addEventListener("click", (e) => {
-  if (e.target.tagName === "BUTTON") {
-    const id = e.target.id;
+  if (e.target.tagName !== "BUTTON") return;
+  
+  const route = routes[e.target.id];
+  if (route) {
     content.innerHTML = "";
-
-    if (id === "home") loadHome();
-    if (id === "menu") loadMenu();
-    if (id === "about") loadAbout();
+    route();
   }
 });
 
