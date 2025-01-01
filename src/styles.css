@@ -1,0 +1,27 @@
+:root {
+    --text-color-black: #231F20;
+}
+
+header {
+    display: flex;
+    padding: 3rem 5rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+header button {
+    font-size: 24px;
+    font-family: 'Lemon Milk Bold';
+    letter-spacing: 0.5px;
+    width: 110px;
+    cursor: pointer;
+    color: var(--text-color-black);
+}
+
+header button:hover {
+    text-shadow:
+        0 0 5px #D0D577,
+        0 0 10px #D0D577,
+        0 0 15px #D0D577;
+}
