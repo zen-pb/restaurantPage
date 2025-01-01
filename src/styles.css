@@ -70,3 +70,8 @@ header button:hover {
     color: var(--text-color-black);
     font-family: 'Modern Extended Book';
 }
+
+footer {
+    padding: 1.5rem;
+    text-align: end;
+}
