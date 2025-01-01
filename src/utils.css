@@ -26,6 +26,10 @@ body {
     /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
     background-color: #e1d5c2;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* 5. Improve media defaults */
