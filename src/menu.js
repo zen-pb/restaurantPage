@@ -1,17 +1,17 @@
 export default function loadMenu() {
   const content = document.getElementById("content");
-  
-  const menuSections = ['MAIN', 'DRINKS', 'DESSERTS'];
-  
+
+  const menuSections = ["MAIN", "DRINKS", "DESSERTS"];
+
   const elements = {
     carouselDiv: document.createElement("div"),
     leftButton: document.createElement("button"),
     trackContainer: document.createElement("div"),
     carouselList: document.createElement("ul"),
-    rightButton: document.createElement("button")
+    rightButton: document.createElement("button"),
   };
-  
-  menuSections.forEach(sectionTitle => {
+
+  menuSections.forEach((sectionTitle) => {
     const li = document.createElement("li");
     const fieldset = createFieldset(sectionTitle);
     li.appendChild(fieldset);
@@ -24,7 +24,9 @@ export default function loadMenu() {
     elements.trackContainer,
     elements.rightButton
   );
-  
+
+  elements.carouselDiv.classList.add("menu");
+
   content.appendChild(elements.carouselDiv);
 }
 
