@@ -6,7 +6,7 @@ import loadAbout from "./about";
 
 const content = document.getElementById("content");
 
-const buttons = document.querySelectorAll("nav button");
+const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -16,7 +16,7 @@ buttons.forEach((button) => {
     if (id === "home") loadHome();
     if (id === "menu") loadMenu();
     if (id === "about") loadAbout();
-
-    
   });
 });
+
+loadHome();
