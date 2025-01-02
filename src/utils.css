@@ -39,8 +39,13 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
     max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
 }
 
 /* 6. Inherit fonts for form controls */
