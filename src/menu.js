@@ -42,8 +42,7 @@ BLACK SHAKE`,
   const dessertsNames = [
     `RYOMEN SUKUNA
 FINGER PARFAIT`,
-    `PANDA
-TOAST`,
+    `PANDA TOAST`,
   ];
 
   menuCategories.forEach((item, index) => {
