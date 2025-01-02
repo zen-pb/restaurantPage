@@ -70,16 +70,29 @@ header button:hover {
     font-family: 'Modern Extended Book';
 }
 
+#content {
+    display: flex;
+}
+
 .carousel {
     position: relative;
     height: 600px;
-    width: 80%;
-    margin: 0 auto;
+    width: 40%;
+    margin-inline: 5rem;
 }
 
 .carousel__item {
     width: 100%;
     height: 100%;
+    color: var(--color-black);
+    border: 5px solid var(--color-black);
+}
+
+.carousel__item legend {
+    padding-inline: 1rem;
+    text-align: center;
+    font-family: 'Lemon Milk Bold';
+    font-size: 24px;
 }
 
 .carousel__track-container {
@@ -113,42 +126,46 @@ header button:hover {
 
 .carousel__button--left,
 .carousel__button--right {
-    width: 50px;
-    height: 50px;
-    background-size: 50px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .carousel__button--left {
     background-image: url("./leftBTN.svg");
-    left: -40px;
+    left: -50px;
     z-index: 1;
 }
 
 .carousel__button--right {
     background-image: url("./rightBTN.svg");
-    right: -40px;
+    right: -50px;
 }
 
 .carousel__nav {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .carousel__indicator {
     border: 0;
     border-radius: 5px;
     height: 25px;
-    width: 90px;
-    background: rgba(35, 31, 32, .3);
+    width: 100px;
+    background: white;
     margin: 0 12px;
     cursor: pointer;
+    font-family: 'Lemon Milk Bold';
+    font-size: 14px;
+    color: var(--color-black);
 }
 
 .carousel__indicator.current-slide {
-    background: rgba(35, 31, 32, .75);
+    background: var(--color-black);
+    color: #e1d5c2;
 }
 
 .is-hidden {
