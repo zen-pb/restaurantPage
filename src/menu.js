@@ -10,8 +10,16 @@ export default function loadMenu() {
   assembleCarousel(elements, content);
   initializeCarousel(elements);
 
-  const preview = document.createElement("div");
+  const preview = document.createElement("fieldset");
   preview.classList.add("preview");
+  const legend = document.createElement("legend");
+  legend.textContent = "Preview";
+  preview.appendChild(legend);
+  const p = document.createElement("p");
+  p.textContent = "View Your Selection Here!";
+  p.classList.add("cta-preview");
+  preview.appendChild(p);
+
   content.appendChild(preview);
 
   const menuCategories = content.querySelectorAll(".carousel__item");
@@ -20,7 +28,7 @@ export default function loadMenu() {
 
   const foodButtons = content.querySelectorAll(".carousel__item button");
 
-  generateFoodImg(foodButtons, menuItems, preview);
+  generateFoodImg(foodButtons, menuItems, preview, legend);
 }
 
 function createCarouselElements() {
@@ -240,10 +248,11 @@ function generateFoodButtons(menuCategories, menuFoodNames) {
   });
 }
 
-function generateFoodImg(foodButtons, menuItems, preview) {
+function generateFoodImg(foodButtons, menuItems, preview, legend) {
   foodButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       preview.innerHTML = "";
+      preview.appendChild(legend);
 
       Object.keys(menuItems).forEach((categoryKey) => {
         menuItems[categoryKey].forEach((item, index) => {
@@ -257,6 +266,29 @@ function generateFoodImg(foodButtons, menuItems, preview) {
               img.classList.add(innerIndex % 2 === 0 ? "food" : "name");
               itemContainer.appendChild(img);
             });
+
+            const information = document.createElement("div");
+            information.classList.add("food-info");
+
+            const description = document.createElement("p");
+            description.textContent = item.desc;
+            description.classList.add("food-desc");
+            itemContainer.appendChild(description);
+
+            const price = document.createElement("p");
+            price.textContent = item.price;
+            price.classList.add("food-price");
+
+            const currency = document.createElement("span");
+            currency.textContent = item.currency;
+            currency.classList.add("currency");
+
+            price.appendChild(currency);
+
+            information.appendChild(description);
+            information.appendChild(price);
+
+            itemContainer.appendChild(information);
 
             preview.appendChild(itemContainer);
           }
