@@ -113,6 +113,10 @@ header button:hover {
     padding: 1rem 0;
 }
 
+.carousel__item button:focus {
+    outline: none;
+}
+
 .carousel__track-container {
     height: 100%;
     position: relative;
