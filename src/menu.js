@@ -1,3 +1,5 @@
+import { menuFoodNames, menuItems } from "./foodMenu";
+
 export default function loadMenu() {
   const content = document.getElementById("content");
   const menuSections = ["MAIN", "DRINKS", "DESSERTS"];
@@ -13,59 +15,28 @@ export default function loadMenu() {
   content.appendChild(preview);
 
   const menuCategories = content.querySelectorAll(".carousel__item");
-  const mainFoodNames = [
-    `YUJI ITADORI 
-KATSU CURRY`,
-    `MEGUMI FUSHIGURO
-KANGO AN'EITEI BURGER`,
-    `NOBARA KUGISAKI
-AGLIO OLIO`,
-    `MAKI ZEN'IN
-AYAM PENYET SAMBAL IJO`,
-    `TOGE INUMAKI
-ONIGIRI SET`,
-  ];
-
-  const drinksNames = [
-    `SATORU GOJO
-KYOSHIKI 'MURASAKI'`,
-    `RYOMEN SUKUNA
-BERRY BOOZE`,
-    `MAHITO
-BLUE OCEAN`,
-    `NANAMI KENTO
-BLACK SHAKE`,
-    `SUGURU GETO
-'UZUMAKI'`,
-  ];
-
-  const dessertsNames = [
-    `RYOMEN SUKUNA
-FINGER PARFAIT`,
-    `PANDA TOAST`,
-  ];
 
   menuCategories.forEach((item, index) => {
     if (index === 0) {
-      mainFoodNames.forEach((food, innerIndex) => {
+      menuFoodNames.MAIN.forEach((food, innerIndex) => {
         const button = document.createElement("button");
-        button.textContent = mainFoodNames[innerIndex];
+        button.textContent = menuFoodNames.MAIN[innerIndex];
         menuCategories[index].appendChild(button);
       });
     }
 
     if (index === 1) {
-      drinksNames.forEach((food, innerIndex) => {
+      menuFoodNames.DRINKS.forEach((food, innerIndex) => {
         const button = document.createElement("button");
-        button.textContent = drinksNames[innerIndex];
+        button.textContent = menuFoodNames.DRINKS[innerIndex];
         menuCategories[index].appendChild(button);
       });
     }
 
     if (index === 2) {
-      dessertsNames.forEach((food, innerIndex) => {
+      menuFoodNames.DESSERTS.forEach((food, innerIndex) => {
         const button = document.createElement("button");
-        button.textContent = dessertsNames[innerIndex];
+        button.textContent = menuFoodNames.DESSERTS[innerIndex];
         menuCategories[index].appendChild(button);
       });
     }
