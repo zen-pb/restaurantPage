@@ -15,10 +15,6 @@ export default function loadMenu() {
   const legend = document.createElement("legend");
   legend.textContent = "Preview";
   preview.appendChild(legend);
-  const p = document.createElement("p");
-  p.textContent = "View Your Selection Here!";
-  p.classList.add("cta-preview");
-  preview.appendChild(p);
 
   content.appendChild(preview);
 
@@ -29,6 +25,12 @@ export default function loadMenu() {
   const foodButtons = content.querySelectorAll(".carousel__item button");
 
   generateFoodImg(foodButtons, menuItems, preview, legend);
+
+  const firstButton = menuCategories[0].querySelector("button");
+  if (firstButton) {
+    firstButton.click();
+    firstButton.focus();
+  }
 }
 
 function createCarouselElements() {
