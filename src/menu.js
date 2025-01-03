@@ -17,6 +17,10 @@ export default function loadMenu() {
   const menuCategories = content.querySelectorAll(".carousel__item");
 
   generateFoodButtons(menuCategories, menuFoodNames);
+
+  const foodButtons = content.querySelectorAll(".carousel__item button");
+
+  generateFoodImg(foodButtons, menuItems, preview);
 }
 
 function createCarouselElements() {
@@ -233,5 +237,31 @@ function generateFoodButtons(menuCategories, menuFoodNames) {
         menuCategories[index].appendChild(button);
       });
     }
+  });
+}
+
+function generateFoodImg(foodButtons, menuItems, preview) {
+  foodButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      preview.innerHTML = "";
+
+      Object.keys(menuItems).forEach((categoryKey) => {
+        menuItems[categoryKey].forEach((item, index) => {
+          if (e.target.id === item.id) {
+            const itemContainer = document.createElement("div");
+            itemContainer.classList.add(index % 2 === 0 ? "even" : "odd");
+
+            item.img.forEach((imgFood, innerIndex) => {
+              const img = document.createElement("img");
+              img.src = imgFood;
+              img.classList.add(innerIndex % 2 === 0 ? "food" : "name");
+              itemContainer.appendChild(img);
+            });
+
+            preview.appendChild(itemContainer);
+          }
+        });
+      });
+    });
   });
 }
