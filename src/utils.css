@@ -46,6 +46,8 @@ svg {
     background-repeat: no-repeat;
     background-size: cover;
     shape-margin: 1rem;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 /* 6. Inherit fonts for form controls */
