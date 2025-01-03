@@ -153,13 +153,12 @@ header button:hover {
 
 .carousel__button--left {
     background-image: url("./leftBTN.svg");
-    left: -50px;
-    z-index: 1;
+    left: -40px;
 }
 
 .carousel__button--right {
     background-image: url("./rightBTN.svg");
-    right: -50px;
+    right: -40px;
 }
 
 .carousel__nav {
