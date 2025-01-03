@@ -1,3 +1,31 @@
+import yujiMainFood from "./yuji-food.svg";
+import yujiMainFoodName from "./yuji-food-name.svg";
+import megumiMainFood from "./megumi-food.svg";
+import megumiMainFoodName from "./megumi-food-name.svg";
+import nobaraMainFood from "./nobara-food.svg";
+import nobaraMainFoodName from "./nobara-food-name.svg";
+import makiMainFood from "./maki-food.svg";
+import makiMainFoodName from "./maki-food-name.svg";
+import inumakiMainFood from "./inumaki-food.svg";
+import inumakiMainFoodName from "./inumaki-food-name.svg";
+
+import gojoDrink from "./gojo-drink.svg";
+import gojoDrinkName from "./gojo-drink-name.svg";
+import sukunaDrink from "./sukuna-drink.svg";
+import sukunaDrinkName from "./sukuna-drink-name.svg";
+import mahitoDrink from "./mahito-drink.svg";
+import mahitoDrinkName from "./mahito-drink-name.svg";
+import nanamiDrink from "./nanami-drink.svg";
+import nanamiDrinkName from "./nanami-drink-name.svg";
+import getoDrink from "./geto-drink.svg";
+import getoDrinkName from "./geto-drink-name.svg";
+
+import sukunaDessert from "./sukuna-dessert.svg";
+import sukunaDessertName from "./sukuna-dessert-name.svg";
+import pandaDessert from "./panda-dessert.svg";
+import pandaDessertName from "./panda-dessert-name.svg";
+
+// Menu food names
 const menuFoodNames = {
   MAIN: [
     "YUJI ITADORI\nKATSU CURRY",
@@ -16,71 +44,60 @@ const menuFoodNames = {
   DESSERTS: ["RYOMEN SUKUNA\nFINGER PARFAIT", "PANDA TOAST"],
 };
 
+// Menu items
 const menuItems = {
   main: [
     {
-      food: "./yuji-food.svg",
-      name: "./yuji-food-name.svg",
-      id: "yuji",
+      img: [yujiMainFood, yujiMainFoodName],
+      id: "yuji-main",
     },
     {
-      food: "./megumi-food.svg",
-      name: "./megumi-food-name.svg",
-      id: "megumi",
+      img: [megumiMainFood, megumiMainFoodName],
+      id: "megumi-main",
     },
     {
-      food: "./nobara-food.svg",
-      name: "./nobara-food-name.svg",
-      id: "nobara",
+      img: [nobaraMainFood, nobaraMainFoodName],
+      id: "nobara-main",
     },
     {
-      food: "./maki-food.svg",
-      name: "./maki-food-name.svg",
-      id: "maki",
+      img: [makiMainFood, makiMainFoodName],
+      id: "maki-main",
     },
     {
-      food: "./inumaki-food.svg",
-      name: "./inumaki-food-name.svg",
-      id: "inumaki",
+      img: [inumakiMainFood, inumakiMainFoodName],
+      id: "toge-main",
     },
   ],
   drinks: [
     {
-      food: "./gojo-drink.svg",
-      name: "./gojo-drink-name.svg",
-      id: "gojo",
+      img: [gojoDrink, gojoDrinkName],
+      id: "gojo-drink",
     },
     {
-      food: "./sukuna-drink.svg",
-      name: "./sukuna-drink-name.svg",
-      id: "sukuna",
+      img: [sukunaDrink, sukunaDrinkName],
+      id: "sukuna-drink",
     },
     {
-      food: "./mahito-drink.svg",
-      name: "./mahito-drink-name.svg",
-      id: "mahito",
+      img: [mahitoDrink, mahitoDrinkName],
+      id: "mahito-drink",
     },
     {
-      food: "./nanami-drink.svg",
-      name: "./nanami-drink-name.svg",
-      id: "nanami",
+      img: [nanamiDrink, nanamiDrinkName],
+      id: "nanami-drink",
     },
     {
-      food: "./geto-drink.svg",
-      name: "./geto-drink-name.svg",
-      id: "geto",
+      img: [getoDrink, getoDrinkName],
+      id: "geto-drink",
     },
   ],
   desserts: [
     {
-      food: "./sukuna-dessert.svg",
-      name: "./sukuna-dessert-name.svg",
-      id: "sukuna",
+      img: [sukunaDessert, sukunaDessertName],
+      id: "sukuna-dessert",
     },
     {
-      food: "./panda-dessert.svg",
-      name: "./panda-dessert-name.svg",
-      id: "panda",
+      img: [pandaDessert, pandaDessertName],
+      id: "panda-dessert",
     },
   ],
 };
