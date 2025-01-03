@@ -21,6 +21,11 @@ export default function loadMenu() {
       menuFoodNames.MAIN.forEach((food, innerIndex) => {
         const button = document.createElement("button");
         button.textContent = menuFoodNames.MAIN[innerIndex];
+        button.id =
+          menuFoodNames.MAIN[innerIndex]
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .split("-")[0] + "-main";
         menuCategories[index].appendChild(button);
       });
     }
@@ -29,6 +34,11 @@ export default function loadMenu() {
       menuFoodNames.DRINKS.forEach((food, innerIndex) => {
         const button = document.createElement("button");
         button.textContent = menuFoodNames.DRINKS[innerIndex];
+        button.id =
+          menuFoodNames.DRINKS[innerIndex]
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .split("-")[0] + "-drink";
         menuCategories[index].appendChild(button);
       });
     }
@@ -37,6 +47,11 @@ export default function loadMenu() {
       menuFoodNames.DESSERTS.forEach((food, innerIndex) => {
         const button = document.createElement("button");
         button.textContent = menuFoodNames.DESSERTS[innerIndex];
+        button.id =
+          menuFoodNames.DESSERTS[innerIndex]
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .split("-")[0] + "-dessert";
         menuCategories[index].appendChild(button);
       });
     }
