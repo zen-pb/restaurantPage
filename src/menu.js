@@ -16,46 +16,7 @@ export default function loadMenu() {
 
   const menuCategories = content.querySelectorAll(".carousel__item");
 
-  menuCategories.forEach((item, index) => {
-    if (index === 0) {
-      menuFoodNames.MAIN.forEach((food, innerIndex) => {
-        const button = document.createElement("button");
-        button.textContent = menuFoodNames.MAIN[innerIndex];
-        button.id =
-          menuFoodNames.MAIN[innerIndex]
-            .toLowerCase()
-            .replace(/\s+/g, "-")
-            .split("-")[0] + "-main";
-        menuCategories[index].appendChild(button);
-      });
-    }
-
-    if (index === 1) {
-      menuFoodNames.DRINKS.forEach((food, innerIndex) => {
-        const button = document.createElement("button");
-        button.textContent = menuFoodNames.DRINKS[innerIndex];
-        button.id =
-          menuFoodNames.DRINKS[innerIndex]
-            .toLowerCase()
-            .replace(/\s+/g, "-")
-            .split("-")[0] + "-drink";
-        menuCategories[index].appendChild(button);
-      });
-    }
-
-    if (index === 2) {
-      menuFoodNames.DESSERTS.forEach((food, innerIndex) => {
-        const button = document.createElement("button");
-        button.textContent = menuFoodNames.DESSERTS[innerIndex];
-        button.id =
-          menuFoodNames.DESSERTS[innerIndex]
-            .toLowerCase()
-            .replace(/\s+/g, "-")
-            .split("-")[0] + "-dessert";
-        menuCategories[index].appendChild(button);
-      });
-    }
-  });
+  generateFoodButtons(menuCategories, menuFoodNames);
 }
 
 function createCarouselElements() {
@@ -230,4 +191,47 @@ function updateNavigationButtons(elements, slides, targetIndex) {
 
   elements.leftButton.classList.toggle("is-hidden", isFirst);
   elements.rightButton.classList.toggle("is-hidden", isLast);
+}
+
+function generateFoodButtons(menuCategories, menuFoodNames) {
+  menuCategories.forEach((item, index) => {
+    if (index === 0) {
+      menuFoodNames.MAIN.forEach((food, innerIndex) => {
+        const button = document.createElement("button");
+        button.textContent = menuFoodNames.MAIN[innerIndex];
+        button.id =
+          menuFoodNames.MAIN[innerIndex]
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .split("-")[0] + "-main";
+        menuCategories[index].appendChild(button);
+      });
+    }
+
+    if (index === 1) {
+      menuFoodNames.DRINKS.forEach((food, innerIndex) => {
+        const button = document.createElement("button");
+        button.textContent = menuFoodNames.DRINKS[innerIndex];
+        button.id =
+          menuFoodNames.DRINKS[innerIndex]
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .split("-")[0] + "-drink";
+        menuCategories[index].appendChild(button);
+      });
+    }
+
+    if (index === 2) {
+      menuFoodNames.DESSERTS.forEach((food, innerIndex) => {
+        const button = document.createElement("button");
+        button.textContent = menuFoodNames.DESSERTS[innerIndex];
+        button.id =
+          menuFoodNames.DESSERTS[innerIndex]
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .split("-")[0] + "-dessert";
+        menuCategories[index].appendChild(button);
+      });
+    }
+  });
 }
