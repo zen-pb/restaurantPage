@@ -108,13 +108,18 @@ header button:hover {
     width: 270px;
     white-space: pre-wrap;
     cursor: pointer;
-    /* background-color: #231F20;
-    color: #e1d5c2; */
     padding: 1rem 0;
 }
 
 .carousel__item button:focus {
     outline: none;
+    background-color: #231F20;
+    color: #e1d5c2;
+}
+
+.carousel__item button:hover {
+    background-color: #231F20;
+    color: #e1d5c2;
 }
 
 .carousel__track-container {
