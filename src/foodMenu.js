@@ -71,11 +71,11 @@ const menuItems = {
   drinks: [
     {
       img: [gojoDrink, gojoDrinkName],
-      id: "gojo-drink",
+      id: "satoru-drink",
     },
     {
       img: [sukunaDrink, sukunaDrinkName],
-      id: "sukuna-drink",
+      id: "ryomen-drink",
     },
     {
       img: [mahitoDrink, mahitoDrinkName],
@@ -87,13 +87,13 @@ const menuItems = {
     },
     {
       img: [getoDrink, getoDrinkName],
-      id: "geto-drink",
+      id: "suguru-drink",
     },
   ],
   desserts: [
     {
       img: [sukunaDessert, sukunaDessertName],
-      id: "sukuna-dessert",
+      id: "ryomen-dessert",
     },
     {
       img: [pandaDessert, pandaDessertName],
