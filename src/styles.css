@@ -44,7 +44,7 @@ header button:hover {
     font-size: 80px;
 }
 
-.hero .btn-div{
+.hero .btn-div {
     display: flex;
     gap: 1rem;
     align-self: center;
