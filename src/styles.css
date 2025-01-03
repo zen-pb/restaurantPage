@@ -44,6 +44,12 @@ header button:hover {
     font-size: 80px;
 }
 
+.hero .btn-div{
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+}
+
 .hero button {
     background-color: #D2DB89;
     padding: 12px 32px;
@@ -56,11 +62,19 @@ header button:hover {
     height: 70px;
     white-space: pre-line;
     line-height: 1.2;
-    align-self: center;
+}
+
+.hero .about-us {
+    background-color: #f4f3f2;
+}
+
+.hero .about-us:hover {
+    background-color: #dedede;
+    transform: scale(1.05);
 }
 
 .hero button:hover {
-    background-color: #bbc47a;
+    background-color: #bcc47a;
     transform: scale(1.05);
 }
 
